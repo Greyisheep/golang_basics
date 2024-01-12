@@ -1,9 +1,6 @@
 package main
 
-import (
-	"fmt"
-	"strings"
-)
+import "fmt"
 
 // func sayGreeting(n string) {
 // 	fmt.Printf("Good morning %v \n", n)
@@ -21,32 +18,38 @@ import (
 // 	return math.Pi * r * r
 // }
 
-func getInitials(n string) (string, string) {
-	s := strings.ToUpper(n)
-	names := strings.Split(s, " ")
+// func getInitials(n string) (string, string) {
+// 	s := strings.ToUpper(n)
+// 	names := strings.Split(s, " ")
 
-	var initials []string
-	for _, v := range names {
-		initials = append(initials, v[:1])
-	}
+// 	var initials []string
+// 	for _, v := range names {
+// 		initials = append(initials, v[:1])
+// 	}
 
-	if len(initials) > 1 {
-		return initials[0], initials[1]
-	}
+// 	if len(initials) > 1 {
+// 		return initials[0], initials[1]
+// 	}
 
-	return initials[0], "_"
-}
+// 	return initials[0], "_"
+// }
 
 func main() {
 
-	fn1, sn1 := getInitials("annie leonhart")
-	fmt.Println(fn1, sn1)
+	sayHello("claret")
 
-	fn2, sn2 := getInitials("eren jaeger")
-	fmt.Println(fn2, sn2)
+	for _, v := range points {
+		fmt.Println(v)
+	}
 
-	fn3, sn3 := getInitials("titans")
-	fmt.Println(fn3, sn3)
+	// fn1, sn1 := getInitials("annie leonhart")
+	// fmt.Println(fn1, sn1)
+
+	// fn2, sn2 := getInitials("eren jaeger")
+	// fmt.Println(fn2, sn2)
+
+	// fn3, sn3 := getInitials("titans")
+	// fmt.Println(fn3, sn3)
 
 	// // strings
 	// var nameOne string = "claret"
