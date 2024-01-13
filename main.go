@@ -36,11 +36,38 @@ import "fmt"
 
 func main() {
 
-	sayHello("claret")
-
-	for _, v := range points {
-		fmt.Println(v)
+	menu := map[string]float64{
+		"soup":   4.99,
+		"pie":    7.99,
+		"salad":  6.99,
+		"toffee": 3.55,
 	}
+
+	fmt.Println(menu)
+	fmt.Println(menu["pie"])
+
+	// looping maps
+	for k, v := range menu {
+		fmt.Println(k, "-", v)
+	}
+
+	// ints as key type
+	phonebook := map[int]string{
+		8110774138: "grey",
+		8038379343: "dota",
+		8034894915: "kc",
+	}
+
+	fmt.Println(phonebook)
+	fmt.Println(phonebook[8110774138])
+
+	phonebook[8038379343] = "chinyere"
+	fmt.Println(phonebook)
+	// sayHello("claret")
+
+	// for _, v := range points {
+	// 	fmt.Println(v)
+	// }
 
 	// fn1, sn1 := getInitials("annie leonhart")
 	// fmt.Println(fn1, sn1)
