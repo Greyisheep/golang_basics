@@ -34,35 +34,60 @@ import "fmt"
 // 	return initials[0], "_"
 // }
 
+func updateName(x string) string {
+	x = "wedge"
+	return x
+}
+
+func updateMenu(y map[string]float64) {
+	y["coffee"] = 2.99
+}
+
 func main() {
 
+	// group A types -> strings, ints, bools, floats, arrays, structs
+	name := "ozii"
+
+	name = updateName(name)
+
+	fmt.Println(name)
+
+	// group B types -> slices, maps, functions
 	menu := map[string]float64{
-		"soup":   4.99,
-		"pie":    7.99,
-		"salad":  6.99,
-		"toffee": 3.55,
+		"coffee":    5.95,
+		"ice cream": 3.99,
 	}
 
+	updateMenu(menu)
 	fmt.Println(menu)
-	fmt.Println(menu["pie"])
 
-	// looping maps
-	for k, v := range menu {
-		fmt.Println(k, "-", v)
-	}
+	// menu := map[string]float64{
+	// 	"soup":   4.99,
+	// 	"pie":    7.99,
+	// 	"salad":  6.99,
+	// 	"toffee": 3.55,
+	// }
 
-	// ints as key type
-	phonebook := map[int]string{
-		8110774138: "grey",
-		8038379343: "dota",
-		8034894915: "kc",
-	}
+	// fmt.Println(menu)
+	// fmt.Println(menu["pie"])
 
-	fmt.Println(phonebook)
-	fmt.Println(phonebook[8110774138])
+	// // looping maps
+	// for k, v := range menu {
+	// 	fmt.Println(k, "-", v)
+	// }
 
-	phonebook[8038379343] = "chinyere"
-	fmt.Println(phonebook)
+	// // ints as key type
+	// phonebook := map[int]string{
+	// 	8110774138: "grey",
+	// 	8038379343: "dota",
+	// 	8034894915: "kc",
+	// }
+
+	// fmt.Println(phonebook)
+	// fmt.Println(phonebook[8110774138])
+
+	// phonebook[8038379343] = "chinyere"
+	// fmt.Println(phonebook)
 	// sayHello("claret")
 
 	// for _, v := range points {
