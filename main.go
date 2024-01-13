@@ -63,7 +63,9 @@ func promptOptions(b bill) {
 		promptOptions(b)
 
 	case "s":
-		fmt.Println("you chose to save the bill", b)
+		b.save()
+
+		fmt.Println("you saved the file - ", b.name)
 	default:
 		fmt.Println("That was not a valid option...")
 		promptOptions(b)
@@ -74,4 +76,15 @@ func promptOptions(b bill) {
 func main() {
 	mybill := createBill()
 	promptOptions(mybill)
+}
+
+// save bill
+func (b *bill) save() {
+	data := []byte(b.format())
+
+	err := os.WriteFile("bills/"+b.name+".txt", data, 0644)
+	if err != nil {
+		panic(err)
+	}
+	fmt.Println("bill was saved to file")
 }
